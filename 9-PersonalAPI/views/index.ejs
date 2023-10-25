@@ -1,0 +1,47 @@
+<%- include("partials/header"); %>
+<form action="/greet" method="get">
+    Enter a new name:
+    <input type="text" name="name" id="name">
+    <input type="submit">
+</form>
+<table>
+    <tbody>
+        <% names.forEach((person)=>{ %>
+            <tr>
+                <td>Greetings <%= person %></td>
+                <td><a href="/wazzup?name=<%= person %>">Say wazzup</a></td>
+            </tr>
+            <% });%>
+    </tbody>    
+</table>
+
+<hr/>
+<form action="/task" method="post">
+    <h1>Enter a new task:</h1>
+    <input type="text" name="task" id="task">
+    <input type="submit">
+</form>
+
+<table>
+    <thead>
+        <tr><th>To do list</th></tr>
+    </thead>
+    <tbody>
+<%  var index = 0;
+    tasks.forEach((task)=>{ %>
+    <tr>
+        <td>Hello <%= task %>!</td>
+        <form method="delete" action="/task">
+            <td>
+                <input type="hidden" name="index" value="<%= index %>">
+                <input type="submit" formmethod="get" formaction="/up" value="Up">
+                <input type="submit" formmethod="get" formaction="/down" value="Down">
+                <input type="submit" formmethod="DELETE" value="Delete">
+            </td>
+        </form>
+    </tr>
+<% index += 1;
+});%>
+    </tbody>
+</table>
+<%- include("partials/footer"); %>

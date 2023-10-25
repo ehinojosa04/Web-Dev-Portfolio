@@ -1,0 +1,35 @@
+body{
+    background-color: #E5E5E5 !important;
+    font-family: 'Merriweather', serif;
+}
+
+h1{
+    color: #FCA311 !important;
+    font-family: 'Sacramento', cursive;
+    font-size: 5.5rem;
+    margin: 50px;
+}
+
+h2{
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    padding-bottom: 10px;
+}
+
+h3{
+    color: #14213D !important;
+    font-family: 'Montserrat', sans-serif;
+}
+
+hr{
+    border-color: #EAF6F6 !important;
+    border: dotted !important;
+    margin-left: 100px !important;
+    margin-right: 100px !important;
+    border-bottom: 0;
+}
+        
+.ImgCel{
+    height: 100px;
+}
